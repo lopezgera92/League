@@ -60,9 +60,7 @@ namespace League.Pages.Players
             IQueryable<string> teamsQuery = from t in _context.Teams
                                             orderby t.TeamId
                                             select t.TeamId;
-            List<string> teamList = await teamsQuery.ToListAsync();
-            IEnumerable<string> teamListUpper = teamList.Select(t => t.ToUpper());
-            Teams = new SelectList(teamListUpper);
+            Teams = new SelectList(await teamsQuery.ToListAsync());
 
             IQueryable<string> positionQuery = from p in _context.Players
                                                orderby p.Position
