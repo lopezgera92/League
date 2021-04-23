@@ -39,15 +39,15 @@ namespace League.Pages.Players
                                          select p;
             if (!string.IsNullOrEmpty(SelectedTeam))
             {
-                players.Where(p => p.TeamId == SelectedTeam);
+                players = players.Where(p => p.TeamId == SelectedTeam);
             }
             if (!string.IsNullOrEmpty(SelectedPosition))
             {
-                players.Where(p => p.Position == SelectedPosition);
+                players = players.Where(p => p.Position == SelectedPosition);
             }
             if (!string.IsNullOrEmpty(SearchString))
             {
-                players.Where(p => SearchString.Contains(p.Name));
+                players = players.Where(p => p.Name.ToLower().Contains(SearchString.ToLower()));
             }
             switch (SortField)
             {
