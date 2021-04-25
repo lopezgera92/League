@@ -47,7 +47,7 @@ namespace League.Pages.Teams
             }
             else
             {
-                FavoriteTeam = HttpContext.Session.GetString("_Favorite");
+                FavoriteTeam = "";
             }
         }
 
