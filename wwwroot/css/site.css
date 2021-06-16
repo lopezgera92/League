@@ -122,3 +122,17 @@ section.grid a
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.nfl-ball {
+    background-image: url('../image/nfl/dave-adamson-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1200px;
+    max-width: 100%;
+    border-radius: 0.3rem;
+}
+
+.nfl-header {
+    margin-bottom: 0 !important;
+}
